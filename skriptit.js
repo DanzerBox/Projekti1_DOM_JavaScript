@@ -1,10 +1,11 @@
 // Luodaan todo-lista, todo-tekstin lisäys ja napit, sekä näkymä.
+
 let todoInput = document.querySelector(".todo-input");
 let todoList = document.querySelector(".todo-list");
 const todoBtn = document.querySelector(".todo-btn");
 const filterOption = document.querySelector(".filter-todo");
 
-// Eventit aktivoidaan käyttäen "addEventListener" toimintoa, 
+// Eventit aktivoidaan käyttäen "addEventListener" toimintoa,
 // eli funktiot saadaan toimimaan käytännön tasolla.
 document.addEventListener("DOMContentLoaded", getTodos);
 todoBtn.addEventListener("click", addTodo);
@@ -18,7 +19,7 @@ function addTodo(event) {
   event.preventDefault();
   // Lisätään Todo Div toiminto
   let todoDiv = document.createElement("div");
-    todoDiv.classList.add("todo");
+  todoDiv.classList.add("todo");
   // Luodaan li
   let newTodo = document.createElement("li");
   newTodo.textContent = todoInput.value;
@@ -60,7 +61,7 @@ function deleteCheck(e) {
     todo.classList.toggle("completed");
   }
 }
-//tähän tulee filter toiminto, eli mahdollisuus vaihtaa näkymiä valmiiden ja 
+//tähän tulee filter toiminto, eli mahdollisuus vaihtaa näkymiä valmiiden ja
 //keskeneräisten tehtävien kanssa.
 function filterTodo(e) {
   const todos = todoList.childNodes;
@@ -89,7 +90,7 @@ function filterTodo(e) {
 
 //
 // Lisätään mahdollisuus lisätä listalle painamalla "Enter" nappia
-// ja ylipäätään lisätään tekstin mukaan. 
+// ja ylipäätään lisätään tekstin mukaan.
 document.addEventListener("input", () => {
   if (event.keyCode == 13) {
     // Ehkäistään perinteinen muoto.

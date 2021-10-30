@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <!--
-      <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"/>
-    -->
+   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
@@ -19,8 +15,15 @@
     <header>
       <h1>To-Do Tehtävälista</h1>
     </header>
+    <!--Visuaalisuuden mielessä laitettu yks funktio tähän html tiedostoon -->
+      <div type="text" id="datetime" style="text-align:center">
+        <script>
+        dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleString();
+        </script> 
+        </div>
     <form>
-      <input type="text" class="todo-input" placeholder="Kirjoita tehtäväsi..." />
+      <input type="text" class="todo-input" placeholder="Kirjoita tehtäväsi..." required/>
       <button class="todo-btn" type="submit">
         <i class="fas fa-plus"></i>
       </button>
@@ -36,6 +39,7 @@
     <div class="todo-container">
       <ul class="todo-list"></ul>
     </div>
+    
     <script src="skriptit.js"></script>
   </body>
 </html>

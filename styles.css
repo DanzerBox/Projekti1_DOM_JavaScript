@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
   background: linear-gradient(120deg, #002136, #2039ac);
@@ -115,11 +116,11 @@ form button:hover {
   background-color: #ffffff;
   color: rgb(148, 148, 148);
   border: none;
-  padding: 1rem;
   cursor: pointer;
   font-size: 17px;
   outline: none;
   border-radius: 15px;
+  height: 40px;
 }
 .complete-btn {
   background-color: rgb(73, 204, 73);
@@ -141,7 +142,7 @@ form button:hover {
 }
 
 .fall {
-  transform: translateY(18rem) rotateZ(20deg);
+  transform: translateY(20rem) rotateZ(20deg);
   opacity: 0;
 }
 
